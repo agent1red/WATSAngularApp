@@ -16,7 +16,8 @@ module.exports = function (grunt) {
     require('jit-grunt')(grunt, {
         useminPrepare: 'grunt-usemin',
         ngtemplates: 'grunt-angular-templates',
-        cdnify: 'grunt-google-cdn'
+        cdnify: 'grunt-google-cdn',
+		buildcontrol:	'grunt-build-control'
     });
 
     // Configurable paths for the application
@@ -32,6 +33,22 @@ module.exports = function (grunt) {
         yeoman: appConfig,
 
         // Watches files for changes and runs tasks based on the changed files
+		
+		buildcontrol: {
+    options: {
+      dir: 'dist',
+      commit: true,
+      push: true,
+      message: 'Built	%sourceName%	from	commit	%sourceCommit%	on	branch	%sourceBranc h%'
+    },
+    pages: {
+      options: {
+        remote: 'https://github.com/agent1red/WATSAngularApp.git',
+        branch: 'gh-pages'
+      }
+    }
+  },
+		
         watch: {
             bower: {
                 files: ['bower.json'],
