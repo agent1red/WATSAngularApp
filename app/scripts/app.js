@@ -20,7 +20,7 @@ angular
     'ngTouch'
   ])
   .config(function ($routeProvider,  $locationProvider) {
-	  
+	  $locationProvider.hashPrefix('');
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -35,5 +35,4 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-	  $locationProvider.html5Mode(true);
   });
