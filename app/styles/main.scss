@@ -7,27 +7,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-
-body {
-  padding: 0;
-   text-align: center;
-
-.footer,
-.navbar {
-  padding-left: 15px;
-  padding-right: 15px;
-    background-color: rgba($turquoiseDark, .4);
-    .navbar-brand{
-        color: $graySilver;
-         
-    }
-}
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
+// Site-specific styles
+// Add additional stylesheets below
+@import "content";
 
 
 
