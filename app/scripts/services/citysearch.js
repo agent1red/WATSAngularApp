@@ -13,7 +13,7 @@ angular.module('watsangularAppApp')
      // ...
 
      // Public API here
-     return $resource('http://api.openweathermap.org/data/2.5/find?q=:query&type=like&mode=json&APPID=6c8912d0f4d911c85542740297789701', {}, {
+     return $resource('http://api.openweathermap.org/data/2.5/find?q=:query&type=like&mode=json&units=imperial&APPID=6c8912d0f4d911c85542740297789701', {}, {
          find: {
              method: 'GET',
              params: {
