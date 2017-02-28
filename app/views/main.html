@@ -20,6 +20,7 @@
         <dl ng-repeat="city in citiesFound.list"> 
             <dt>{{city.name}}, {{city.sys.country}}</dt>
             <dd>{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
+            <dd><img ng-src='http://openweathermap.org/img/w/{{city.weather[0].icon}}.png' style="width:80px;"></dd>
             <dt>Temperature</dt>
             <dd>{{city.main.temp}} &deg;F</dd>
             <dd><a ng-href="#/current/{{city.id}}" class="btn btn-lg btn-primary">View Weather</a></dd>
