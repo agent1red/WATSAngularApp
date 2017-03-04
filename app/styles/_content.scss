@@ -7,43 +7,63 @@ html {
 
  
 body {
-    padding: 0;
-    text-align: center;
-    background-image: url("../images/rain.jpg");
-   background-size: cover;
+  background: url("../images/rain.jpg") 0 0/cover;
+
+ 
+  padding: 0;
+  letter-spacing: 4pt;
+  word-spacing: -2.6pt;
     .jumbotron{
         background: linear-gradient( $turquoiseLighter, $turquoiseDawn);
         text-shadow: 0.5px 0.5px 2px rgba(0,0,0,0.3);
-
-        label {
+        text-align: center;
+        h1, label {
             color: $white;
 
             .inputText {
                 color: darkslategrey;
             }
+           
         }
+         .searchQ{
+             color: $white;
+             text-align: left;
+               .lead {
+                   text-align: center;
+               }
+               .btn.btn-lg.btn-primary {
+                   margin-top: 40px;
+               }
+            }
     }
 
-     .container {
-
-
-     }
+   
     .footer{
         border-top: 2px solid $turquoiseLighter;
     }
 
     .navbar {
-        padding-left: 15px;
-        padding-right: 15px;
-        padding: $padding-large-vertical;
-        background-color: rgba($brand-info,1);
+         background: rgba($brand-info,1);
+         padding-left: 15px;
+         padding-right: 15px;
+         padding: $padding-large-vertical;
       
     }
+    .saved-cities-list {
+        padding-left: 0px;
+        
+    }
+h2{
+        color: $white;
+        font-weight: bolder;
+        }
+        
 
     .btn {
         font-size: 21px;
         padding: 14px 24px;
-        margin-left: 90px;
+        margin-left: 0px;
+       
     }
     
 ul {
@@ -57,6 +77,13 @@ dl {
 }
 }
 
+h2 {
+color: $white;
+text-align: left;
+}
+li {
+     color: black;
+}
 //weather forcast styling
 h1.forcast-title {
      color: $white;
