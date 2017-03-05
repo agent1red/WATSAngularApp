@@ -1,15 +1,10 @@
 
 @import "variables";
-html {
-      
-    
-   }
+
 
  
 body {
   background: url("../images/rain.jpg") 0 0/cover;
-
- 
   padding: 0;
   letter-spacing: 4pt;
   word-spacing: -2.6pt;
@@ -19,9 +14,9 @@ body {
         text-align: center;
         h1, label {
             color: $white;
-
+            margin-top: 0px;
             .inputText {
-                color: darkslategrey;
+                color: $grayTaupe;
             }
            
         }
@@ -30,18 +25,74 @@ body {
              text-align: left;
                .lead {
                    text-align: center;
+                   font-weight: bold;
+
                }
+               dd, dt {
+                   padding-top: 10px;
+               }
+               
                .btn.btn-lg.btn-primary {
                    margin-top: 40px;
                }
             }
-    }
+         /*current view section*/ 
+         .curentViewTitle {
+             margin-top: 0px;
+             color: $white;
+             font-size: 43px;
+         }
+         .currentView {
+             color: $white;
+             font-size: $font-size-h3;
+         }
+         .currentDescripion {
+             color: $white;
+             padding-top: 10px;
+             text-align: left;
+             
+             dt {
+             padding-top: 10px;
+             }
+          
 
-   
-    .footer{
-        border-top: 2px solid $turquoiseLighter;
-    }
 
+         }
+    }
+      /*forecast section*/
+      .forecastContainer {
+
+ position: relative;
+  text-align:center;
+  margin: 10px auto;
+   width: 90%;
+      }
+
+      h1.forcast-title {
+     color: $white;
+}
+dl.weather-forecast.ng-scope {
+    color: $white;
+         background: linear-gradient( $turquoiseLighter, $turquoiseDawn);
+        text-shadow: 0.5px 0.5px 2px rgba(0,0,0,0.3);
+        text-align: center;
+       
+       
+  width: 100px;
+  display:inline-block;
+  margin: 10px;
+      
+        font-size: 12px;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 0.2pt;
+word-spacing: 0.2pt;
+line-height: 0;
+word-wrap: break-word;
+dt {
+    color:darkslategray;
+}
+}
     .navbar {
          background: rgba($brand-info,1);
          padding-left: 15px;
@@ -76,7 +127,8 @@ dl {
   border-radius: $border-radius-large;
 }
 }
-
+     
+ 
 h2 {
 color: $white;
 text-align: left;
@@ -85,13 +137,4 @@ li {
      color: black;
 }
 //weather forcast styling
-h1.forcast-title {
-     color: $white;
-}
-dl.weather-forecast.ng-scope {
- background-color: rgba(68, 239, 26, 0.8);
-  display: inline-block;
-  width: 30%;
-  margin-right: 20px;
 
-}

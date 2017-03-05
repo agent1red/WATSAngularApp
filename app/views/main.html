@@ -16,14 +16,14 @@
 </div>
 <div  class="searchQ" ng-if="searchQuery">
      
-        <p class="lead">{{citiesFound.count}} cities found matching the query: {{searchQuery}}.</p>
+        <p class="lead">{{citiesFound.count}} cities found matching the query: </p> 
         <dl ng-repeat="city in citiesFound.list"> 
-            <dd><img ng-src='http://openweathermap.org/img/w/{{city.weather[0].icon}}.png' style="width:80px;"></dd>
+            <dd><img ng-src='http://openweathermap.org/img/w/{{city.weather[0].icon}}.png' style="width:80px; height:100px;"></dd>
             <dt>{{city.name}}, {{city.sys.country}}</dt>
             <dd>{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
            
-            <dt>Temperature</dt>
-            <dd>{{city.main.temp}} &deg;F</dd>
+            <dt>Current Temperature is - {{city.main.temp}} &deg;F</dt>
+             
             <dd><a ng-href="#/current/{{city.id}}" class="btn btn-lg btn-primary">View Weather</a></dd>
         </dl>  
     </div>
